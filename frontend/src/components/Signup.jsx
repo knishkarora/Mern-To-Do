@@ -40,11 +40,11 @@ const Signup = () => {
   }
 
    return (
-        <div className='min-h-screen flex items-center justify-center bg-black p-4'>
-            <div className='gradient-border-secondary w-full max-w-md'>
+        <div className='min-h-screen flex items-center justify-center bg-black p-8'>
+            <div className='gradient-border-secondary w-96'>
                 <div className='bg-gray-900 p-8 rounded-2xl'>
                     <div className='text-center mb-8'>
-                        <h1 className='text-gradient text-4xl font-bold mb-2'>TaskFlow</h1>
+                        <h1 className='text-gradient text-3xl font-bold mb-3'>TaskFlow</h1>
                         <p className='text-gray-400 text-sm'>Create your account to get started</p>
                     </div>
                     
@@ -83,7 +83,7 @@ const Signup = () => {
                         </div>
                         
                         {error && (
-                            <div className='bg-red-500/10 border border-red-500/20 rounded-lg p-3'>
+                            <div className='bg-red-500/10 border border-red-500/20 rounded-lg p-4'>
                                 <p className='text-red-400 text-sm text-center'>{error}</p>
                             </div>
                         )}

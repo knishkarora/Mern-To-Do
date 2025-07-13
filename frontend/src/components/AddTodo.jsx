@@ -69,19 +69,19 @@ const AddTodo = () => {
   const user = JSON.parse(localStorage.getItem('user') || '{}')
 
   return (
-    <div className='min-h-screen bg-black p-4'>
-      <div className='max-w-4xl mx-auto'>
+    <div className='min-h-screen bg-black p-8'>
+      <div className='w-96 mx-auto'>
         {/* Header */}
         <div className='gradient-border-accent mb-8'>
           <div className='bg-gray-900 p-6 rounded-2xl'>
             <div className='flex justify-between items-center'>
               <div>
-                <h1 className='text-gradient text-3xl font-bold mb-1'>TaskFlow</h1>
+                <h1 className='text-gradient text-2xl font-bold mb-2'>TaskFlow</h1>
                 <p className='text-gray-400 text-sm'>Welcome back, {user.name || 'User'}!</p>
               </div>
               <button 
                 onClick={handleLogout}
-                className='px-6 py-2 rounded-lg text-white font-medium glass-effect hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-300'
+                className='px-4 py-2 rounded-lg text-white font-medium glass-effect hover:bg-red-500/20 hover:border-red-500/50 transition-all duration-300 text-sm'
               >
                 Logout
               </button>
@@ -92,7 +92,7 @@ const AddTodo = () => {
         {/* Add Todo Form */}
         <div className='gradient-border mb-8'>
           <div className='bg-gray-900 p-6 rounded-2xl'>
-            <form onSubmit={handleSubmit} className='flex gap-4'>
+            <form onSubmit={handleSubmit} className='flex gap-3'>
               <input 
                 type="text" 
                 placeholder="What needs to be done?" 
@@ -103,9 +103,9 @@ const AddTodo = () => {
               <button 
                 type='submit'
                 disabled={loading || !newTodo.trim()}
-                className='modern-button px-8 py-3 rounded-lg text-white font-medium text-base disabled:opacity-50 disabled:cursor-not-allowed'
+                className='modern-button px-6 py-3 rounded-lg text-white font-medium text-base disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap'
               >
-                {loading ? 'Adding...' : 'Add Task'}
+                {loading ? 'Adding...' : 'Add'}
               </button>
             </form>
           </div>
